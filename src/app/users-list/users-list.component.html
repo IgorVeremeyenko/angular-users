@@ -1,0 +1,36 @@
+<!-- 5.	Сделать вывод списка пользователей в компоненте, добавив код в HTML и CSS файлы -->
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-5">           
+            <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Имя</th>
+                    <th scope="col">Логин</th>
+                    <th scope="col">E-mail</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let users of users$">
+                    <th scope="row">{{users.id}}</th>
+                    <td>{{users.name}}</td>
+                    <td>{{users.username}}</td>
+                    <td>{{users.email}}</td>                    
+                  </tr> 
+                </tbody>
+              </table>
+        </div>
+        <div class="clo-md-6" style="margin-left: 2em;">            
+              <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark" (click)="buttonHandle()">
+                Добавить пользователя
+              </button>
+              <div *ngIf="pressed">
+                  <app-add-users></app-add-users>
+              </div>
+        </div>
+    </div>
+    
+    
+</div>

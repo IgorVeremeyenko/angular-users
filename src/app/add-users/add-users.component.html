@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit(formdata)" #formdata="ngForm">
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" name="name" class="form-control" [(ngModel)]="addingForm.name" required/>
+          <label class="form-label" for="form6Example1">Имя</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example2" name="username" class="form-control" [(ngModel)]="addingForm.username"/>
+          <label class="form-label" for="form6Example2">Логин</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form6Example5" name="email" class="form-control" [(ngModel)]="addingForm.email" required/>
+      <label class="form-label" for="form6Example5">Почта</label>
+    </div> 
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Добавить</button>
+  </form>
